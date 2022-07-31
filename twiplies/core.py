@@ -9,6 +9,7 @@ import pandas as pd
 from fastcore.utils import *
 
 class Twiplies:
+    """Instantiate a Tweepy object to fetch tweets replies."""
     def __init__(self, username, consumer_key, consumer_secret, access_token, access_token_secret):
         store_attr()
         self.auth = tweepy.OAuthHandler(self.consumer_key, self.consumer_secret)
@@ -17,6 +18,7 @@ class Twiplies:
     __repr__ = basic_repr('username')
 
     def get_replies_from_tweet(self, tweet_id):
+        """Get replies from a specfic tweet."""
         tweet_ids = []
         replies = []
         for tweet in tweepy.Cursor(self.api.search_tweets, q='to:'+self.username, result_type='recent').items(10000):
@@ -32,4 +34,3 @@ class Twiplies:
         })
 
         return df
-
