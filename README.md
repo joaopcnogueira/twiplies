@@ -24,12 +24,6 @@ robot = Twiplies(
 ```
 
 ``` python
-robot
-```
-
-    Twiplies(username='joaopcnogueira')
-
-``` python
 robot.get_replies_from_tweet(tweet_id='1549897550953603074')
 ```
 
