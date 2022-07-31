@@ -27,6 +27,8 @@ d = { 'settings': { 'audience': 'Developers',
                 'title': 'twiplies',
                 'tst_flags': 'notest',
                 'user': 'joaopcnogueira',
-                'version': '0.0.1'},
+                'version': '0.0.3'},
   'syms': { 'twiplies.core': { 'twiplies.core.Twiplies': 'https://joaopcnogueira.github.io/twiplies/core.html#twiplies',
-                               'twiplies.core.Twiplies.get_replies_from_tweet': 'https://joaopcnogueira.github.io/twiplies/core.html#twiplies.get_replies_from_tweet'}}}
+                               'twiplies.core.Twiplies.get_all_replies': 'https://joaopcnogueira.github.io/twiplies/core.html#twiplies.get_all_replies',
+                               'twiplies.core.Twiplies.get_replies_from_tweet': 'https://joaopcnogueira.github.io/twiplies/core.html#twiplies.get_replies_from_tweet'},
+            'twiplies.io.build_dataframe': { 'twiplies.io.build_dataframe.build_dataframe': 'https://joaopcnogueira.github.io/twiplies/io.build_dataframe.html#build_dataframe'}}}
