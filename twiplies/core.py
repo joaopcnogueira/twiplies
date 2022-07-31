@@ -23,7 +23,8 @@ class Twiplies:
     def __str__(self): return f"{self.username}"
     __repr__ = __str__
 
-    def get_replies_from_tweet(self, tweet_id):
+    def get_replies_from_tweet(self, 
+                              tweet_id): # tweet id, you can get it from the last part of the tweet url
         """Get replies from a specfic tweet."""
         tweet_ids = []
         replies = []
