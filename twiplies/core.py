@@ -21,8 +21,8 @@ class Twiplies:
         self.auth = tweepy.OAuthHandler(self.consumer_key, self.consumer_secret)
         self.auth.set_access_token(self.access_token, self.access_token_secret)
         self.api = tweepy.API(self.auth)
-    def __str__(self): return f"{self.username}"
-    __repr__ = __str__
+    __repr__ = basic_repr('username')
+    def __str__(self): return f"Twiplies(username='{self.username}')"
     def __eq__(self, a): return self.username == a.username
 
     def get_replies_from_tweet(self, 
