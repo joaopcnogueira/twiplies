@@ -3,9 +3,10 @@
 # %% auto 0
 __all__ = ['Twiplies']
 
-# %% ../nbs/00_core.ipynb 4
+# %% ../nbs/00_core.ipynb 5
 import tweepy
 from fastcore.utils import *
+from fastcore.test import *
 from .io.build_dataframe import build_dataframe
 
 class Twiplies:
@@ -22,6 +23,7 @@ class Twiplies:
         self.api = tweepy.API(self.auth)
     def __str__(self): return f"{self.username}"
     __repr__ = __str__
+    def __eq__(self, a): return self.username == a.username
 
     def get_replies_from_tweet(self, 
                                tweet_id: str, # tweet id, you can get it from the last part of the tweet url
