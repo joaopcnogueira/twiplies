@@ -2,10 +2,10 @@ name: CI
 on:  [workflow_dispatch, pull_request, push]
 
 env:
-  consumer_key: ${{env.consumer_key}}
-  consumer_secret: ${{env.consumer_secret}}
-  access_token: ${{env.access_token}}
-  access_token_secret: ${{env.access_token_secret}}
+  CONSUMER_KEY: ${{env.CONSUMER_KEY}}
+  CONSUMER_SECRET: ${{env.CONSUMER_SECRET}}
+  ACCESS_TOKEN: ${{env.ACCESS_TOKEN}}
+  ACCESS_TOKEN_SECRET: ${{env.ACCESS_TOKEN_SECRET}}
 
 jobs:
   test:
