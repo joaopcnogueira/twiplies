@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "Twiplies",
+    "section": "",
+    "text": "Tests\n\nimport os\nfrom dotenv import load_dotenv\n\nload_dotenv()\n\nrobot1 = Twiplies(\n    username=\"joaopcnogueira\",\n    consumer_key=os.getenv(\"CONSUMER_KEY\"),\n    consumer_secret=os.getenv(\"CONSUMER_SECRET\"),\n    access_token=os.getenv(\"ACCESS_TOKEN\"),\n    access_token_secret=os.getenv(\"ACCESS_TOKEN_SECRET\")\n)\n\nrobot2 = Twiplies(\n    username=\"joaopcnogueira\",\n    consumer_key=os.getenv(\"CONSUMER_KEY\"),\n    consumer_secret=os.getenv(\"CONSUMER_SECRET\"),\n    access_token=os.getenv(\"ACCESS_TOKEN\"),\n    access_token_secret=os.getenv(\"ACCESS_TOKEN_SECRET\")\n)\n\nrobot3 = Twiplies(\n    username=\"mamede86\",\n    consumer_key=os.getenv(\"CONSUMER_KEY\"),\n    consumer_secret=os.getenv(\"CONSUMER_SECRET\"),\n    access_token=os.getenv(\"ACCESS_TOKEN\"),\n    access_token_secret=os.getenv(\"ACCESS_TOKEN_SECRET\")\n)\n\n\ntest_eq(robot1, robot2)\n\n\ntest_ne(robot1, robot3)\n\n\ntest_ne(robot2, robot3)\n\n\n\nHow to Use\nExample on how to use twiplies:\n\nfrom dotenv import load_dotenv\n\nload_dotenv()\n\nrobot = Twiplies(\n    username=\"joaopcnogueira\",\n    consumer_key=os.getenv(\"CONSUMER_KEY\"),\n    consumer_secret=os.getenv(\"CONSUMER_SECRET\"),\n    access_token=os.getenv(\"ACCESS_TOKEN\"),\n    access_token_secret=os.getenv(\"ACCESS_TOKEN_SECRET\")\n)\n\n\nrobot\n\nTwiplies(username='joaopcnogueira')\n\n\n\nrobot.get_replies_from_tweet(tweet_id='1552109783393751042', n_tweets=100)\n\n\n\n\n\n  \n    \n      \n      tweet_original\n      tweet_replies\n      tweet_user\n      tweet_location\n    \n  \n  \n    \n      0\n      1552109783393751042\n      @joaopcnogueira Sim! O carregador não posso ma...\n      annppn\n      Rio de Janeiro, Brazil\n    \n  \n\n\n\n\n\nrobot.get_all_replies(n_tweets=1000)\n\n\n\n\n\n  \n    \n      \n      tweet_original\n      tweet_replies\n      tweet_user\n      tweet_location\n    \n  \n  \n    \n      0\n      1553619245552091136\n      @jeremyphoward Did I forgot to mention all of ...\n      joaopcnogueira\n      \n    \n    \n      1\n      1553412331845160962\n      @joaopcnogueira @arnaldog12_ Olha só, não esta...\n      apachaves\n      France\n    \n    \n      2\n      1552333709717786625\n      @joaopcnogueira 🥲\n      mribeirodantas\n      Natal, Brazil🇧🇷\n    \n    \n      3\n      1552112385065877504\n      @joaopcnogueira não 😣\n      annppn\n      Rio de Janeiro, Brazil\n    \n    \n      4\n      1552109783393751042\n      @joaopcnogueira Sim! O carregador não posso ma...\n      annppn\n      Rio de Janeiro, Brazil\n    \n    \n      5\n      1550922456625463296\n      @joaopcnogueira Salam, here is your unroll: ht...\n      UnrollHelper"
+  },
+  {
+    "objectID": "io.build_dataframe.html",
+    "href": "io.build_dataframe.html",
+    "title": "IO Tools",
+    "section": "",
+    "text": "build_dataframe (tweet_ids:List, replies:List)\n\nBuild a dataframe with each tweet’s replies for line."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Getting Started",
+    "section": "",
+    "text": "pip install twiplies"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "Getting Started",
+    "section": "How to use",
+    "text": "How to use\n\nfrom twiplies.core import Twiplies\n\n\nimport os\nfrom dotenv import load_dotenv\n\nload_dotenv()\n\nrobot = Twiplies(\n    username=\"joaopcnogueira\",\n    consumer_key=os.getenv(\"CONSUMER_KEY\"),\n    consumer_secret=os.getenv(\"CONSUMER_SECRET\"),\n    access_token=os.getenv(\"ACCESS_TOKEN\"),\n    access_token_secret=os.getenv(\"ACCESS_TOKEN_SECRET\")\n)\n\n\nrobot\n\nTwiplies(username='joaopcnogueira')\n\n\nGet tweet’s replies from a specific tweet_id:\n\nrobot.get_replies_from_tweet(tweet_id='1552109783393751042', n_tweets=100)\n\n\n\n\n\n  \n    \n      \n      tweet_original\n      tweet_replies\n      tweet_user\n      tweet_location\n    \n  \n  \n    \n      0\n      1552109783393751042\n      @joaopcnogueira Sim! O carregador não posso ma...\n      annppn\n      Rio de Janeiro, Brazil\n    \n  \n\n\n\n\nGet tweet’s replies from all twitters from an user:\n\nrobot.get_all_replies(n_tweets=1000)\n\n\n\n\n\n  \n    \n      \n      tweet_original\n      tweet_replies\n      tweet_user\n      tweet_location\n    \n  \n  \n    \n      0\n      1553619245552091136\n      @jeremyphoward Did I forgot to mention all of ...\n      joaopcnogueira\n      \n    \n    \n      1\n      1553412331845160962\n      @joaopcnogueira @arnaldog12_ Olha só, não esta...\n      apachaves\n      France\n    \n    \n      2\n      1552333709717786625\n      @joaopcnogueira 🥲\n      mribeirodantas\n      Natal, Brazil🇧🇷\n    \n    \n      3\n      1552112385065877504\n      @joaopcnogueira não 😣\n      annppn\n      Rio de Janeiro, Brazil\n    \n    \n      4\n      1552109783393751042\n      @joaopcnogueira Sim! O carregador não posso ma...\n      annppn\n      Rio de Janeiro, Brazil\n    \n    \n      5\n      1550922456625463296\n      @joaopcnogueira Salam, here is your unroll: ht...\n      UnrollHelper"
+  }
+]
