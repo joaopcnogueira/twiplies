@@ -37,7 +37,7 @@ robot
 Get tweet’s replies from a specific `tweet_id`:
 
 ``` python
-robot.get_replies_from_tweet(tweet_id='1550283468990472194', n_tweets=100)
+robot.get_replies_from_tweet(tweet_id='1552109783393751042', n_tweets=100)
 ```
 
 <div>
@@ -65,6 +65,13 @@ robot.get_replies_from_tweet(tweet_id='1550283468990472194', n_tweets=100)
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <th>0</th>
+      <td>1552109783393751042</td>
+      <td>@joaopcnogueira Sim! O carregador não posso ma...</td>
+      <td>annppn</td>
+      <td>Rio de Janeiro, Brazil</td>
+    </tr>
   </tbody>
 </table>
 </div>
